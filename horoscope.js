@@ -6,16 +6,17 @@
 * Finished and submitted on October 12, 2017
 */
 
-var BD;
-var BM;
-var NUM_SIGN;
-var NAME;
-var DATE = new Date();
-var CM = DATE.getMonth()+1;
-var CD = DATE.getDate();
-var IS_BIRTHDAY;
+var BD; //birthday
+var BM; //birth month
+var NUM_SIGN; //the number corresponding to the sign
+var NAME; //the name entered
+var DATE = new Date(); //today's date
+var CM = DATE.getMonth()+1; //current month
+var CD = DATE.getDate(); //current day
+var IS_BIRTHDAY; //is it the user's birthday?
 
 function onSubmit() {
+    //when the submit button is clicked, runs all the functions (if the data is good)
     BM = document.getElementById("bMonth").value;
     BD = document.getElementById("bDay").value;
     if (!valDates()) {
@@ -28,6 +29,7 @@ function onSubmit() {
 
 
 function valDates() {
+    //validates the dates and name fields; checks to see if it is the user's birthday
     var fakeDate = false;
     NAME = document.getElementById("name").value;
     if (NAME === "What is your name?") {
@@ -51,7 +53,7 @@ function valDates() {
 
 
 function determineSign(x, y) {
-    //clean up
+    //determines the sign depending on the day and month values; returns a number corresponding to that sign
     var month = parseInt(x);
     var day = parseInt(y);
     if((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
@@ -95,6 +97,7 @@ function determineSign(x, y) {
 
 
 function determineHoroscope(NUM_SIGN) {
+    //returns the user's sign and a horoscope
     var signList = ["Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio",
         "Sagittarius", "Capricorn"];
     var horoList = ["You will have good luck", "You will be devoured", "You are secretly a goblin",
@@ -111,6 +114,7 @@ function determineHoroscope(NUM_SIGN) {
 
 
 function determineImage(NUM_SIGN) {
+    //returns an image depending on the user's sign
     var aqu = 'aquarius';
     var pis = 'pisces';
     var ari = 'aries';
