@@ -1,0 +1,46 @@
+/*Nora Coates
+* Horoscope Project
+* Finished and submitted on October 12, 2017
+*/
+
+body {
+    background-color: aliceblue;
+}
+
+.para {
+    color: darkblue;
+    vertical-align: middle;
+    horiz-align: center;
+    font-family: "sans-serif";
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#tutorial {
+    margin-top: 10px;
+    padding-left: 10%;
+}
+
+button {
+    width: 80px;
+    background-color: red;
+    height: 80px;
+    color: black;
+    position: absolute;
+    bottom: 80%;
+    right: 10%;
+    border-radius: 50%;
+
+}
+
+.sel {
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10px;
+}
+
+#horoImg {
+    margin-left: 40%;
+    margin-top: 10px;
+    border: 1px solid black;
+}
